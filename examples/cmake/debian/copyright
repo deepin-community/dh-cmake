@@ -1,11 +1,8 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: dh-cmake
-Source: https://gitlab.kitware.com/debian/dh-cmake
+Upstream-Name: libexample
 
 Files: *
-Copyright: 2018-2020 Kitware, Inc.
-License: BSD-3-clause
-
+Copyright: 2018 Kitware, Inc.
 License: BSD-3-clause
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that the following conditions are met:

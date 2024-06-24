@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: dh-cmake
+Version: 0.6.2
+Summary: Debhelper program for CMake projects
+Home-page: https://gitlab.kitware.com/debian/dh-cmake
+Author: Kyle Edwards
+Author-email: kyle.edwards@kitware.com
+Maintainer: Kitware Debian Maintainers
+Maintainer-email: debian@kitware.com
+Classifier: License :: OSI Approved :: BSD License
+License-File: LICENSE

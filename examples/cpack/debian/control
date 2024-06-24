@@ -1,0 +1,18 @@
+Source: libcpackexample
+Maintainer: Example <example@example.com>
+Build-Depends: cmake, dh-cmake, dh-cmake-compat (= 1), dh-sequence-cpack, debhelper-compat (= 12)
+Standards-Version: 4.1.5
+Section: misc
+Priority: extra
+
+Package: libcpackexample
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: dh-cmake example - libraries
+ This package contains the shared libraries for the dh-cmake example project.
+
+Package: libcpackexample-dev
+Architecture: any
+Depends: ${cpack:Depends}, ${misc:Depends}
+Description: dh-cmake example - development
+ This package contains the development files for the dh-cmake example project.

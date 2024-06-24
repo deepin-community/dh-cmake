@@ -1,5 +1,102 @@
-template-repository (1.0-1) unstable; urgency=medium
+dh-cmake (0.6.2) unstable; urgency=medium
 
-  * Initial release
+  [ Kyle Edwards ]
+  * Fix autopep8 failure (closes: #1038278)
+  * Use DEB_HOST_MULTIARCH in tests (closes: #1022069)
+  * Add Multi-Arch: foreign (closes: #1022054)
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+  [ Alastair McKinstry ]
+  * Move to debhelper 13
+  * Standards-Version: 4.6.1
+
+ -- Alastair McKinstry <mckinstry@debian.org>  Fri, 20 Jan 2023 12:07:42 +0000
+
+dh-cmake (0.6.1) unstable; urgency=medium
+
+  [ Kyle Edwards ]
+  * Use changelog.version in setup.py (closes: #973227)
+  * Install README.md in /usr/share/doc/dh-cmake (closes: #970392)
+  
+ -- Alastair McKinstry <mckinstry@debian.org>  Wed, 11 Nov 2020 16:01:35 +0000
+
+dh-cmake (0.6) unstable; urgency=medium
+
+  [ Kyle Edwards ]
+  * Get setup.py version from d/changelog
+
+ -- Alastair McKinstry <mckinstry@debian.org>  Sun, 06 Sep 2020 15:04:31 +0100
+
+dh-cmake (0.5) unstable; urgency=medium
+
+  [ Alastair McKinstry ]
+  * Fix d/copyright to silence lintian warnings
+
+ -- Alastair McKinstry <mckinstry@debian.org>  Wed, 22 Jul 2020 13:29:55 +0100
+
+dh-cmake (0.4) unstable; urgency=low
+
+  [ Kyle Edwards ]
+  * Added examples.
+  * Changed CMake installation to use cmake --install instead of
+    cmake_install.cmake script.
+  * Changed cmake dependency to "Recommends" instead of "Depends".
+  * Added `Provides: dh-sequence-{cmake,ctest,cpack}` to binary package.
+  * Updated to use modern debhelper-compat dependency.
+  * Bumped Debian policy version.
+  * Now notifies Debhelper when CMake installs files.
+  * Added modernized compat mechanism with the pseudo-package dh-cmake-compat.
+  * Added --component argument to dh_cmake_install.
+  * dh_ctest_test now calls ctest instead of dh_auto_test.
+  * dh_cpack_substvars now ignores packages not specified by --package if it
+    is specified.
+  * Added --ctest-build and --ctest-build-suffix arguments to dh_ctest_*.
+  * Added --ctest-testing-dir argument to dh_ctest_*.
+  * Added quoting and backslashes to DEB_CTEST_OPTIONS.
+  * Added track and catchfailed options to DEB_CTEST_OPTIONS.
+  * Added dh_ctest_update step.
+  * Added dh_ctest_clean step.
+  * Default ctest sequence now runs dh_ctest_submit at the end.
+
+  [ Alastair McKinstry ]
+  * Add myself as uploader (sponsor)
+  * Move to debhelper-compat (= 12)
+  * Use dh-sequence-python3 rather than --with python3
+  * Fix python issues (make pyflakes3 clean)
+
+ -- Alastair McKinstry <mckinstry@debian.org>  Tue, 09 Jun 2020 08:19:49 +0100
+
+dh-cmake (0.3) unstable; urgency=medium
+
+  * Changed dh_cmake_install to use an absolute installation prefix.
+  * Changed the dh_ctest_* steps to each do their own submit step, and
+    removed dh_ctest_submit from the default ctest sequence. dh_ctest_submit
+    still exists, and you can pass --no-submit to the commands to keep the old
+    behavior.
+  * Added a new --parts argument to dh_ctest_submit to only submit some parts
+    to CDash.
+  * Added a compat level file, dh-cmake.compat, for future-proofing.
+  * Added new "site" and "build" options to DEB_CTEST_OPTIONS to control the
+    build and site names submitted to CDash.
+  * Added support for package architectures other than "any" and "all".
+  * Added support for the new CPack External generator provided by CPack. This
+    allows dh-cmake to install CPack components and component groups in
+    specific packages, and use the CPack dependency graph in the output
+    packages.
+  * Added dpkg-dev to the dependencies (for dpkg-architecture).
+  * Added -VV argument to CTest calls to get output from invoked commands.
+
+ -- Kyle Edwards <kyle.edwards@kitware.com>  Wed, 27 Jun 2018 13:54:50 -0400
+
+dh-cmake (0.2) unstable; urgency=low
+
+  * Added CTest support - you can now run CTest in dashboard mode from
+    inside the Debian build environment and submit the test results to a
+    CDash server.
+
+ -- Kyle Edwards <kyle.edwards@kitware.com>  Tue, 01 May 2018 14:17:32 -0400
+
+dh-cmake (0.1) unstable; urgency=low
+
+  * Initial release.
+
+ -- Kyle Edwards <kyle.edwards@kitware.com>  Fri, 27 Apr 2018 13:36:31 -0400
