@@ -1,0 +1,3 @@
+#!/usr/bin/make -f
+
+include $(CURDIR)/debian/$(DH_CMAKE_CASE).mk

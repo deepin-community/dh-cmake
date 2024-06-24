@@ -1,0 +1,12 @@
+[console_scripts]
+dh_cmake_install = dhcmake.cmake:install
+dh_cpack_generate = dhcmake.cpack:generate
+dh_cpack_install = dhcmake.cpack:install
+dh_cpack_substvars = dhcmake.cpack:substvars
+dh_ctest_build = dhcmake.ctest:build
+dh_ctest_clean = dhcmake.ctest:clean
+dh_ctest_configure = dhcmake.ctest:configure
+dh_ctest_start = dhcmake.ctest:start
+dh_ctest_submit = dhcmake.ctest:submit
+dh_ctest_test = dhcmake.ctest:test
+dh_ctest_update = dhcmake.ctest:update

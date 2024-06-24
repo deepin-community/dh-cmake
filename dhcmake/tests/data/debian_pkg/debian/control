@@ -1,0 +1,42 @@
+Source: dh-cmake-test
+Maintainer: Kitware Debian Maintainers <debian@kitware.com>
+Uploaders:
+    Kyle Edwards <kyle.edwards@kitware.com>,
+    Kitware Robot <kwrobot@kitware.com>
+Build-Depends:
+    dh-cmake-compat (= 1),
+    dh-cmake
+Standards-Version: 4.5.0
+Rules-Requires-Root: no
+Section: devel
+
+Package: libdh-cmake-test
+Architecture: any
+Description: libdh-cmake-test
+ libdh-cmake-test
+
+Package: libdh-cmake-test-dev
+Architecture: any
+Depends: ${cpack:Depends}
+Description: libdh-cmake-test-dev
+ libdh-cmake-test-dev
+
+Package: libdh-cmake-test-doc
+Architecture: all
+Description: libdh-cmake-test-doc
+ libdh-cmake-test-doc
+
+Package: libdh-cmake-test-extra-32
+Architecture: armhf
+Description: libdh-cmake-test-extra-32
+ libdh-cmake-test-extra-32
+
+Package: libdh-cmake-test-extra-64
+Architecture: arm64
+Description: libdh-cmake-test-extra-64
+ libdh-cmake-test-extra-64
+
+Package: libdh-cmake-test-extra-both
+Architecture: armhf arm64
+Description: libdh-cmake-test-extra-both
+ libdh-cmake-test-extra-both
